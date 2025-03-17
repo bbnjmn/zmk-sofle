@@ -35,9 +35,9 @@
         tap-ms = <100>;
     };
 
-    hrm: hrm {
+    hrml: hrml {
         compatible = "zmk,behavior-hold-tap";
-        label = "HRM";
+        label = "HRML";
         bindings = <&kp>, <&kp>;
 
         #binding-cells = <2>;
@@ -45,6 +45,18 @@
         quick-tap-ms = <200>;
         flavor = "tap-preferred";
         hold-trigger-key-positions = <27 28 29 30>;
+    };
+
+    hmrr: hmrr {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HMRR";
+        bindings = <&kp>, <&kp>;
+
+        #binding-cells = <2>;
+        hold-trigger-key-positions = <34 35 36 37>;
+        tapping-term-ms = <150>;
+        quick-tap-ms = <200>;
+        flavor = "tap-preferred";
     };
 
     behaviors {
@@ -55,11 +67,11 @@
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1       &kp N2        &kp N3         &kp N4        &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
-&kp TAB     &kp Q        &kp W         &kp E          &kp R         &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
-&kp CAPS    &hrm LGUI A  &hrm LALT S   &hrm LSHIFT D  &hrm LCTRL F  &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
-&kp LSHFT   &kp Z        &kp X         &kp C          &kp V         &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LCTRL    &kp LEFT_GUI  &kp LEFT_ALT   &mo 1         &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
+&kp ESC     &kp N1        &kp N2        &kp N3          &kp N4         &kp N5       &kp UP_ARROW     &kp N6     &kp N7         &kp N8          &kp N9             &kp N0                &kp BACKSPACE
+&kp TAB     &kp Q         &kp W         &kp E           &kp R          &kp T        &kp DOWN_ARROW   &kp Y      &kp U          &kp I           &kp O              &kp P                 &kp BSLH
+&kp CAPS    &hrml LGUI A  &hrml LALT S  &hrml LSHIFT D  &hrml LCTRL F  &kp G        &kp LEFT_ARROW   &kp H      &hmrr RCTRL J  &hmrr RSHIFT K  &hmrr RIGHT_ALT L  &hmrr RGUI SEMICOLON  &kp APOS
+&kp LSHFT   &kp Z         &kp X         &kp C           &kp V          &kp B        &kp RIGHT_ARROW  &kp N      &kp M          &kp COMMA       &kp DOT            &kp FSLH              &kp ENTER
+&kp C_MUTE  &kp LCTRL     &kp LEFT_GUI  &kp LEFT_ALT    &mo 1          &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER      &mo 2           &kp RIGHT_SHIFT    &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
