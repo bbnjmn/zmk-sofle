@@ -26,28 +26,28 @@
     trigger-period-ms = <16>;
 };
 
+
+/* Custom Defined Behaviors */
 / {
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-        tap-ms = <100>;
-    };
-
-    hrml: hrml {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HRML";
-        bindings = <&kp>, <&kp>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <150>;
-        quick-tap-ms = <200>;
-        flavor = "tap-preferred";
-        hold-trigger-key-positions = <27 28 29 30>;
-    };
-
     behaviors {
+        scroll_encoder: scroll_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+    
+            tap-ms = <100>;
+        };
+        hrml: hrml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRML";
+            bindings = <&kp>, <&kp>;
+    
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <27 28 29 30>;
+        };
     };
 
     keymap {
