@@ -56,13 +56,13 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-command$$
-  - {t: Media, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: Navigation, h: '$$mdi:keyboard-space$$'}
+  - {t: '$$mdi:apple-keyboard-option$$', h: Media}
+  - {t: '$$mdi:keyboard-space$$', h: Navigation}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: Symbols, h: '$$mdi:keyboard-space$$'}
-  - {t: Numbers, h: '$$mdi:keyboard-return$$'}
-  - Function
+  - {t: '$$mdi:keyboard-space$$', h: Symbols}
+  - {t: '$$mdi:keyboard-return$$', h: Numbers}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Function}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:backspace-reverse-outline$$
   Navigation:
