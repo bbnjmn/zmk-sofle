@@ -137,11 +137,11 @@
 
         sym {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans            &trans                &trans                 &trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_BRACE  &kp AMPERSAND     &kp STAR              &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp COLON       &kp DOLLAR        &kp PERCENT           &kp CARET              &kp PLUS             &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp TILDE       &kp LEFT_BRACKET  &kp AT                &kp HASH               &kp RIGHT_BRACKET    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER            &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Symbols";
